@@ -12,12 +12,12 @@ const routes = [
         name: "contact"
     },
     {
-        path: "/404",
-        name: "404"
-    },
-    {
         path: "/login",
         name: "login"
+    },
+    {
+        path: "/async",
+        name: "async"
     },
 ];
 
