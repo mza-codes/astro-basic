@@ -1,10 +1,17 @@
 ---
 import Counter from "../components/Counter";
 import RootLayout from "../layouts/RootLayout.astro";
+import Icon from "astro-icon";
 ---
 
 <RootLayout title="Welcome Home!">
 	Hi there this is astro
 
 	<Counter client:load />
+	<div class="flex gap-2 text-white">
+		<Icon name="mdi:account" width="50" />
+		<Icon name="mdi:about" width="40" />
+		<Icon name="mdi:home" width="50"  />
+		
+	</div>
 </RootLayout>
