@@ -1,0 +1,25 @@
+---
+import RootLayout from "../layouts/RootLayout.astro";
+const url = `https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single&amount=3`;
+let oldURL = `https://v2.jokeapi.dev/joke/Any`;
+
+const data = await fetch(url)
+    .then((res) => res.json())
+    .then((json) => json)
+    .catch((err) => {
+        console.log("Error Fetching Daa: ", err);
+        return err;
+    });
+---
+
+<RootLayout title="Async Test">
+    <ul class="list-disc flex flex-col gap-2 text-zinc-100">
+        {data?.jokes?.map((j: any) => (
+                <li>
+                    <pre class="font-bold">{j?.joke}</pre>
+                </li>
+            ))}
+    </ul>
+    <!-- <h3 class="my-3">Response from API:</h3> -->
+    <!-- <code class="px-3 max-w-[90%] break-words overflow-hidden">{JSON.stringify(data, null, 1)}</code> -->
+</RootLayout>

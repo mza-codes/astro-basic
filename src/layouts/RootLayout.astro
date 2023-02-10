@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import NotFound from "../components/NotFound.astro";
 import "../styles/global.css";
 const { title } = Astro.props;
 var center = `flex flex-col items-center justify-center gap-2`;
@@ -20,12 +21,7 @@ var center = `flex flex-col items-center justify-center gap-2`;
         >
             <Header />
             <slot>
-                <h2
-                    class="text-7xl font-semibold text-center text-slate-700 hover:text-zinc-600 cursor-wait"
-                >
-                    404 <br />
-                    Not Found!
-                </h2>
+                <NotFound />
             </slot>
             <Footer />
         </main>
