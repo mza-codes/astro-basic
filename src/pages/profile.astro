@@ -1,0 +1,15 @@
+---
+import RootLayout from "../layouts/RootLayout.astro";
+import { getUser } from "../utils/getUser";
+console.log("REQUEST: ", Astro.request.headers);
+console.log("REQ: ",Astro.cookies);
+const user = null;
+if(!user) return Astro.redirect("/");
+---
+
+<RootLayout title="Profile">
+    <h3>Profile Page</h3>
+    <pre>
+        {JSON.stringify(user,null,1)}
+    </pre>
+</RootLayout>
