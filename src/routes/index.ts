@@ -19,6 +19,11 @@ const routes = [
         path: "/async",
         name: "async"
     },
+    {
+        path: "/profile",
+        name: "profile"
+    },
+
 ];
 
 export default routes;
