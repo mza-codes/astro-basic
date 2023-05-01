@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Header from "../components/Header";
+import Modal from "../components/Modal";
 import NotFound from "../components/NotFound.astro";
 import "../styles/global.css";
 const { title } = Astro.props;
@@ -19,7 +20,8 @@ var center = `flex flex-col items-center justify-center gap-2`;
         <main
             class={`${center} bg-gradient-to-br from-sky-800 via-indigo-400 to-emerald-800 min-h-screen w-full`}
         >
-            <Header />
+            <Header client:load />
+            <Modal client:load />
             <slot>
                 <NotFound />
             </slot>
