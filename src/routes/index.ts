@@ -1,29 +1,29 @@
 const routes = [
     {
         path: "/",
-        name: "home"
+        name: "home",
     },
     {
         path: "/about",
-        name: "about"
+        name: "about",
     },
     {
         path: "/contact",
-        name: "contact"
+        name: "contact",
     },
     {
         path: "/login",
-        name: "login"
+        name: "login",
     },
     {
         path: "/async",
-        name: "async"
+        name: "async",
     },
     {
         path: "/profile",
-        name: "profile"
+        name: "profile",
     },
-
 ];
 
 export default routes;
+export type AppRoute = (typeof routes)[0];

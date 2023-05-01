@@ -1,1 +1,0 @@
-export const center = `flex flex-row gap-2 p-1 items-center justify-center text-center`;
